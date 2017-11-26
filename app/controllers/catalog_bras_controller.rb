@@ -1,4 +1,8 @@
+
+
 class CatalogBrasController < ApplicationController
+
+
   def index         # GET /restaurants
   end
 

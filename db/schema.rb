@@ -10,14 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171126180505) do
+ActiveRecord::Schema.define(version: 20171126214600) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "catalog_bras", force: :cascade do |t|
     t.integer "product_id"
-    t.integer "producer_code_standard"
     t.integer "code_on_card"
     t.string "producer_name"
     t.string "category_name"
@@ -29,7 +28,6 @@ ActiveRecord::Schema.define(version: 20171126180505) do
     t.integer "price_gross"
     t.integer "price_net"
     t.string "product_size"
-    t.integer "code_producer"
     t.string "product_code"
     t.integer "stock"
     t.string "images_large_image_1"
@@ -54,6 +52,10 @@ ActiveRecord::Schema.define(version: 20171126180505) do
     t.integer "projected"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "separation"
+    t.integer "large_roots"
+    t.string "producer_code_standard"
+    t.bigint "code_producer"
   end
 
   create_table "measurements", force: :cascade do |t|
@@ -67,8 +69,6 @@ ActiveRecord::Schema.define(version: 20171126180505) do
     t.integer "breast_roots"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_bras_id"
-    t.index ["user_bras_id"], name: "index_measurements_on_user_bras_id"
   end
 
   create_table "user_bras", force: :cascade do |t|
@@ -80,7 +80,6 @@ ActiveRecord::Schema.define(version: 20171126180505) do
     t.index ["measurements_id"], name: "index_user_bras_on_measurements_id"
   end
 
-  add_foreign_key "measurements", "user_bras", column: "user_bras_id"
   add_foreign_key "user_bras", "catalog_bras", column: "catalog_bras_id"
   add_foreign_key "user_bras", "measurements", column: "measurements_id"
 end
