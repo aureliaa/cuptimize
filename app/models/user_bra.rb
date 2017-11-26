@@ -1,0 +1,2 @@
+class UserBra < ApplicationRecord
+end

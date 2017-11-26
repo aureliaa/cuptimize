@@ -1,0 +1,2 @@
+class CatalogBra < ApplicationRecord
+end
