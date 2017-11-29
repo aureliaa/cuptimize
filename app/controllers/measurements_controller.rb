@@ -1,15 +1,21 @@
 class MeasurementsController < ApplicationController
 
   def index         # GET /restaurants
+    @measurements = Measurement.all
   end
 
   def show          # GET /restaurants/:id
+
   end
 
   def new           # GET /restaurants/new
+    @measurement = Measurement.new
   end
 
-  def create        # POST /restaurants
+  def create
+    @measurement = Measurement.new(measurement_params)
+    @measurement.save
+    redirect_to measurements_path(@measurement)
   end
 
   def edit          # GET /restaurants/:id/edit
@@ -20,5 +26,8 @@ class MeasurementsController < ApplicationController
 
   def destroy       # DELETE /restaurants/:id
   end
+
+  private
+
 
 end

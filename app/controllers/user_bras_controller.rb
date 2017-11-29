@@ -1,4 +1,5 @@
 class UserBrasController < ApplicationController
+
   def index         # GET /restaurants
   end
 

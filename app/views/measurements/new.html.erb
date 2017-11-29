@@ -1,0 +1,28 @@
+
+<%= form_for @measurement, url: catalog_bras_path, method: :get do |f| %>
+  <%= f.label :rib_cage_parameter %>
+  <%= f.number_field :rib_cage_parameter %>
+
+  <%= f.label :breast_cage_rest_perimeter %>
+  <%= f.number_field :breast_cage_rest_perimeter %>
+
+  <%= f.label :breast_cage_bend_perimeter %>
+  <%= f.number_field :breast_cage_bend_perimeter %>
+
+  <%= f.label :breast_upper_shape %>
+  <%= f.select :breast_upper_shape, [1, 2, 3] %>
+
+  <%= f.label :breast_bottom_shape %>
+  <%= f.select :breast_bottom_shape, [1, 2, 3] %>
+
+  <%= f.label :breast_center_disposition %>
+  <%= f.select :breast_center_disposition, [1, 2, 3] %>
+
+  <%= f.label :breast_separation %>
+  <%= f.select :breast_separation, [0, 1] %>
+
+  <%= f.label :breast_roots %>
+  <%= f.select :breast_roots, [0, 1] %>
+
+  <%= f.submit %>
+<% end %>
