@@ -1,28 +1,278 @@
+<section class="content components-content">
 
-<%= form_for @measurement, url: catalog_bras_path, method: :get do |f| %>
-  <%= f.label :rib_cage_parameter %>
-  <%= f.number_field :rib_cage_parameter %>
+    <!-- ==========================
+      SERVICES - START
+    =========================== -->
+    <section class="content services services-3x border-top border-bottom">
+        <div class="container">
+        <%= form_for @measurement, url: catalog_bras_path, method: :get do |f| %>
+          <div class="row row-no-padding">
+            <h2>Tour de dos</h2>
+              <!-- SERVICE - START -->
+                <div class="col-xs-12 col-sm-4">
+                    <div class="service">
+                        <i class="fa fa-magic"></i>
+                        <h3>Comment mesurer ?</h3>
+                        <p>Ut feugiat mauris eget magna egestas porta. Curabitur sagittis sagittis neque rutrum congue.</p>
+                    </div>
+                </div>
+                <!-- SERVICE - END -->
 
-  <%= f.label :breast_cage_rest_perimeter %>
-  <%= f.number_field :breast_cage_rest_perimeter %>
+                <!-- SERVICE - START -->
+                <div class="col-xs-6 col-sm-4">
+                    <div class="service">
+                      <img src="http://res.cloudinary.com/dl3nkexul/image/upload/v1512071224/ribcage_p_cnnsuc.png" class="img-responsive measure">
+                    </div>
+                </div>
+                <!-- SERVICE - END -->
 
-  <%= f.label :breast_cage_bend_perimeter %>
-  <%= f.number_field :breast_cage_bend_perimeter %>
+                <!-- SERVICE - START -->
+                <div class="col-xs-6 col-sm-4">
+                    <div class="service">
+                        <i class="fa fa-female"></i>
+                        <h3>Votre mesure</h3>
+                        <p><%= f.number_field :rib_cage_parameter %>cm
+                        </p>
+                    </div>
+                </div>
+                <!-- SERVICE - END -->
 
-  <%= f.label :breast_upper_shape %>
-  <%= f.select :breast_upper_shape, [1, 2, 3] %>
+            </div>
 
-  <%= f.label :breast_bottom_shape %>
-  <%= f.select :breast_bottom_shape, [1, 2, 3] %>
+            <div class="row row-no-padding">
+            <h2>Tour de poitrine debout</h2>
+              <!-- SERVICE - START -->
+                <div class="col-xs-12 col-sm-4">
+                    <div class="service">
+                        <i class="fa fa-magic"></i>
+                        <h3>Comment mesurer ?</h3>
+                        <p>Ut feugiat mauris eget magna egestas porta. Curabitur sagittis sagittis neque rutrum congue.</p>
+                    </div>
+                </div>
+                <!-- SERVICE - END -->
 
-  <%= f.label :breast_center_disposition %>
-  <%= f.select :breast_center_disposition, [1, 2, 3] %>
+                <!-- SERVICE - START -->
+                <div class="col-xs-6 col-sm-4">
+                    <div class="service">
+                        <img src="http://res.cloudinary.com/dl3nkexul/image/upload/v1512071224/ribcage_p_cnnsuc.png" class="img-responsive measure">
+                    </div>
+                </div>
+                <!-- SERVICE - END -->
 
-  <%= f.label :breast_separation %>
-  <%= f.select :breast_separation, [0, 1] %>
+                <!-- SERVICE - START -->
+                <div class="col-xs-6 col-sm-4">
+                    <div class="service">
+                        <i class="fa fa-female"></i>
+                        <h3>Votre mesure</h3>
+                        <p><%= f.number_field :breast_cage_rest_perimeter %>cm</p>
+                    </div>
+                </div>
+                <!-- SERVICE - END -->
 
-  <%= f.label :breast_roots %>
-  <%= f.select :breast_roots, [0, 1] %>
+            </div>
 
-  <%= f.submit %>
-<% end %>
+            <div class="row row-no-padding">
+            <h2>Tour de poitrine à 90°</h2>
+              <!-- SERVICE - START -->
+                <div class="col-xs-12 col-sm-4">
+                    <div class="service">
+                        <i class="fa fa-magic"></i>
+                        <h3>Comment mesurer ?</h3>
+                        <p>Ut feugiat mauris eget magna egestas porta. Curabitur sagittis sagittis neque rutrum congue.</p>
+                    </div>
+                </div>
+                <!-- SERVICE - END -->
+
+                <!-- SERVICE - START -->
+                <div class="col-xs-6 col-sm-4">
+                    <div class="service">
+                        <img src="http://res.cloudinary.com/dl3nkexul/image/upload/v1512071492/brest_p_lxgjwy.png" class="img-responsive measure">
+
+                    </div>
+                </div>
+                <!-- SERVICE - END -->
+
+                <!-- SERVICE - START -->
+                <div class="col-xs-6 col-sm-4">
+                    <div class="service">
+                        <i class="fa fa-female"></i>
+                        <h3>Votre mesure</h3>
+                        <p> <%= f.number_field :breast_cage_bend_perimeter %>cm</p>
+                    </div>
+                </div>
+                <!-- SERVICE - END -->
+
+            </div>
+
+            <div class="row row-no-padding">
+            <h2>Forme du haut du sein</h2>
+              <!-- SERVICE - START -->
+                <div class="col-xs-12 col-sm-4">
+                    <div class="service">
+                        <i class="fa fa-magic"></i>
+                        <h3>Comment mesurer ?</h3>
+                        <p>Ut feugiat mauris eget magna egestas porta. Curabitur sagittis sagittis neque rutrum congue.</p>
+                    </div>
+                </div>
+                <!-- SERVICE - END -->
+
+                <!-- SERVICE - START -->
+                <div class="col-xs-6 col-sm-4">
+                    <div class="service">
+                        <img src="http://res.cloudinary.com/dl3nkexul/image/upload/v1512071858/upper_sahep_hsyzuz.jpg" class="img-responsive measure", style="margin-left:0px">
+                    </div>
+                </div>
+                <!-- SERVICE - END -->
+
+                <!-- SERVICE - START -->
+                <div class="col-xs-6 col-sm-4">
+                    <div class="service">
+                        <i class="fa fa-female"></i>
+                        <h3>Votre mesure</h3>
+                        <p><%= f.select :breast_upper_shape, [1, 2, 3] %></p>
+                    </div>
+                </div>
+                <!-- SERVICE - END -->
+
+            </div>
+
+            <div class="row row-no-padding">
+            <h2>Forme du bas du sein</h2>
+              <!-- SERVICE - START -->
+                <div class="col-xs-12 col-sm-4">
+                    <div class="service">
+                        <i class="fa fa-magic"></i>
+                        <h3>Comment mesurer ?</h3>
+                        <p>Ut feugiat mauris eget magna egestas porta. Curabitur sagittis sagittis neque rutrum congue.</p>
+                    </div>
+                </div>
+                <!-- SERVICE - END -->
+
+                <!-- SERVICE - START -->
+                <div class="col-xs-6 col-sm-4">
+                    <div class="service">
+                        <img src="http://res.cloudinary.com/dl3nkexul/image/upload/v1512071856/bottom_shape_oexlkh.jpg" class="img-responsive measure", style="margin-left:0px">
+
+                    </div>
+                </div>
+                <!-- SERVICE - END -->
+
+                <!-- SERVICE - START -->
+                <div class="col-xs-6 col-sm-4">
+                    <div class="service">
+                        <i class="fa fa-female"></i>
+                        <h3>Votre mesure</h3>
+                        <p><%= f.select :breast_bottom_shape, [1, 2, 3] %></p>
+                    </div>
+                </div>
+                <!-- SERVICE - END -->
+
+            </div>
+
+            <div class="row row-no-padding">
+            <h2>Forme horizontale</h2>
+              <!-- SERVICE - START -->
+                <div class="col-xs-12 col-sm-4">
+                    <div class="service">
+                        <i class="fa fa-magic"></i>
+                        <h3>Comment mesurer ?</h3>
+                        <p>Ut feugiat mauris eget magna egestas porta. Curabitur sagittis sagittis neque rutrum congue.</p>
+                    </div>
+                </div>
+                <!-- SERVICE - END -->
+
+                <!-- SERVICE - START -->
+                <div class="col-xs-6 col-sm-4">
+                    <div class="service">
+                      <img src="http://res.cloudinary.com/dl3nkexul/image/upload/c_scale,h_155/v1512072401/center_disposition_crny0r.jpg", style="margin-left:0px">
+                    </div>
+                </div>
+                <!-- SERVICE - END -->
+
+                <!-- SERVICE - START -->
+                <div class="col-xs-6 col-sm-4">
+                    <div class="service">
+                        <i class="fa fa-female"></i>
+                        <h3>Votre mesure</h3>
+                        <p><%= f.select :breast_center_disposition, [1, 2, 3] %></p>
+                    </div>
+                </div>
+                <!-- SERVICE - END -->
+
+            </div>
+
+            <div class="row row-no-padding">
+            <h2>Séparation des seins</h2>
+              <!-- SERVICE - START -->
+                <div class="col-xs-12 col-sm-4">
+                    <div class="service">
+                        <i class="fa fa-magic"></i>
+                        <h3>Comment mesurer ?</h3>
+                        <p>Ut feugiat mauris eget magna egestas porta. Curabitur sagittis sagittis neque rutrum congue.</p>
+                    </div>
+                </div>
+                <!-- SERVICE - END -->
+
+                <!-- SERVICE - START -->
+                <div class="col-xs-6 col-sm-4">
+                    <div class="service">
+
+                            <img src="http://res.cloudinary.com/dl3nkexul/image/upload/v1512071578/separate-boobs_mu7ju8.png" class="img-responsive measure">
+                    </div>
+                </div>
+                <!-- SERVICE - END -->
+
+                <!-- SERVICE - START -->
+                <div class="col-xs-6 col-sm-4">
+                    <div class="service">
+                        <i class="fa fa-female"></i>
+                        <h3>Votre mesure</h3>
+                        <p><%= f.select :breast_separation, [0, 1] %>cm</p>
+                    </div>
+                </div>
+                <!-- SERVICE - END -->
+
+            </div>
+
+            <div class="row row-no-padding">
+            <h2>Naissance des seins</h2>
+              <!-- SERVICE - START -->
+                <div class="col-xs-12 col-sm-4">
+                    <div class="service">
+                        <i class="fa fa-magic"></i>
+                        <h3>Comment mesurer ?</h3>
+                        <p>Ut feugiat mauris eget magna egestas porta. Curabitur sagittis sagittis neque rutrum congue.</p>
+                    </div>
+                </div>
+                <!-- SERVICE - END -->
+
+                <!-- SERVICE - START -->
+                <div class="col-xs-6 col-sm-4">
+                    <div class="service">
+
+                      <img src="http://res.cloudinary.com/dl3nkexul/image/upload/v1512071582/wide-root_lw3bca.png" class="img-responsive measure">
+
+                    </div>
+                </div>
+                <!-- SERVICE - END -->
+
+                <!-- SERVICE - START -->
+                <div class="col-xs-6 col-sm-4">
+                    <div class="service">
+                        <i class="fa fa-female"></i>
+                        <h3>Votre mesure</h3>
+                        <p><%= f.select :breast_roots, [0, 1] %>cm</p>
+                    </div>
+                </div>
+                <!-- SERVICE - END -->
+                </div>
+        </div>
+<div class="container measurement">
+    <%= f.submit "Envoyer mes mesures", class: "measurement form-group btn btn-primary", style:"background-color:pink"%>
+    </div>
+    <% end %>
+    </section>
+    <!-- ==========================
+      SERVICES - END
+    =========================== -->
+</section>

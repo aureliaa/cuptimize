@@ -4,6 +4,23 @@
  *
  * umarket theme v1.1
 ------------------------------*/
+/*------------------------------
+  ADDED
+------------------------------*/
+
+.form-group.small {
+  margin-right: 10px;
+  width:10px;
+}
+
+.measurement {
+  text-align:right;
+  margin-bottom:10px;
+}
+
+.img-responsive.measure {
+  margin-left:40px;
+}
 
 /*------------------------------
   FONT AWESOME CORE
@@ -3990,7 +4007,7 @@ footer.navbar a:hover {
 }
 
 .services .row > div:nth-child(3n) .service {
-  border-right-width:0;
+  border-right-width:1px;
 }
 
 .services .service i {
@@ -4483,6 +4500,9 @@ footer.navbar a:hover {
 /*------------------------------
   COMPONENTS
 ------------------------------*/
+.content.components-content {
+  margin-top:70px;
+}
 
 .components-content {
   padding:20px;
