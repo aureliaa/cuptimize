@@ -22,8 +22,8 @@
       CSS
     =========================== -->
     <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= stylesheet_link_tag "http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" %>
 
-    <link href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
 
 
     <!-- ==========================
@@ -33,29 +33,23 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-  <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_pack_tag 'application' %>
 
+    <%= javascript_include_tag "http://code.jquery.com/jquery-latest.min.js" %>
+    <%= javascript_include_tag "http://code.jquery.com/ui/1.11.1/jquery-ui.js" %>
     <!-- ==========================
       JS
     =========================== -->
-  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=true"></script>
-    <script src="assets/javascripts/bootstrap.min.js"></script>
-    <script src="assets/javascripts//bootstrap-hover-dropdown.min.js"></script>
-    <script src="assets/javascripts//SmoothScroll.js"></script>
-    <script src="assets/javascripts//jquery.dragtable.js"></script>
-    <script src="assets/javascripts//jquery.card.js"></script>
-    <script src="assets/javascripts//owl.carousel.min.js"></script>
-    <script src="assets/javascripts//twitterFetcher_min.js"></script>
-    <script src="assets/javascripts//jquery.mb.YTPlayer.min.js"></script>
-    <script src="assets/javascripts//color-switcher.js"></script>
-    <script src="assets/javascripts/custom.js"></script>
+
 
 </head>
 <body>
+    <div id="page-wrapper"> <!-- PAGE - START -->
       <%= render 'shared/navbar' %>
-    <%= yield %>
 
+    <%= yield %>
+          <%= render 'shared/footer' %>
+  </div>
   </body>
 </html>

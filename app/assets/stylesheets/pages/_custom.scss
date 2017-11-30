@@ -3508,7 +3508,7 @@ footer.navbar a:hover {
 
 #homepage-1-carousel .slide-1 {
   text-align:center;
-  background-image:url(../images/slide-1.jpg);
+  background-image:url(http://res.cloudinary.com/dl3nkexul/image/upload/v1512054527/bra-1659570_1920_fiokgj.jpg);
   background-position-y:-230px;
 }
 
@@ -3558,8 +3558,12 @@ footer.navbar a:hover {
 /* HOME2 - SLIDE 1 */
 
 #homepage-2-carousel .slide-1 {
-  background-image:url(../images/slide-4.jpg);
+  background-image:url(http://res.cloudinary.com/dl3nkexul/image/upload/v1512054527/bra-1659570_1920_fiokgj.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   text-align:center;
+  background-size:center;
 }
 
 #homepage-2-carousel .slide-1 .slide-mask {
