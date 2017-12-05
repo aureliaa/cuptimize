@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171126214600) do
+ActiveRecord::Schema.define(version: 20171205201303) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -74,12 +74,12 @@ ActiveRecord::Schema.define(version: 20171126214600) do
   create_table "user_bras", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "measurements_id"
-    t.bigint "catalog_bras_id"
-    t.index ["catalog_bras_id"], name: "index_user_bras_on_catalog_bras_id"
-    t.index ["measurements_id"], name: "index_user_bras_on_measurements_id"
+    t.bigint "measurement_id"
+    t.bigint "catalog_bra_id"
+    t.index ["catalog_bra_id"], name: "index_user_bras_on_catalog_bra_id"
+    t.index ["measurement_id"], name: "index_user_bras_on_measurement_id"
   end
 
-  add_foreign_key "user_bras", "catalog_bras", column: "catalog_bras_id"
-  add_foreign_key "user_bras", "measurements", column: "measurements_id"
+  add_foreign_key "user_bras", "catalog_bras"
+  add_foreign_key "user_bras", "measurements"
 end

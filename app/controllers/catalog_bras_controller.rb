@@ -24,6 +24,7 @@ class CatalogBrasController < ApplicationController
           end
         end
       end
+
   end
 
   def show          # GET /restaurants/:id
@@ -44,7 +45,14 @@ class CatalogBrasController < ApplicationController
   def destroy       # DELETE /restaurants/:id
   end
 
+  private
+
   def measurement_params
     params.require(:measurement).permit(:rib_cage_parameter, :breast_cage_rest_perimeter, :breast_cage_bend_perimeter, :breast_upper_shape, :breast_bottom_shape, :breast_center_disposition, :breast_separation, :breast_roots  )
   end
+
+  def user_bra_params
+    params.require(:user_bra).permit(:measurement_id, :catalog_bra_id)
+  end
+
 end

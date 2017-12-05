@@ -54,7 +54,6 @@
                     <div class="row grid" id="products">
 
                         <!-- PRODUCT - START -->
-
                       <% @bras_measurement_user.each do |bra_measurement_user| %>
                       <div class="col-sm-4 col-xs-6">
                             <article class="product-item">
@@ -74,10 +73,13 @@
                                             <span class="price">
                                                 <ins><span class="amount"><%= bra_measurement_user.product_size %></span></ins>
                                             </span>
-                                            <div class="buttons">
-                                                <a href="<%= bra_measurement_user.product_buy_url%>" class="btn btn-primary btn-sm add-to-cart", target="_blank"><i class="fa fa-shopping-cart"></i>Voir le produit</a>
+<%= simple_form_for @measurement, url: user_bras_path, method: :get do |f| %>
+<%= hidden_field_tag 'user_bra[measurement_id]', @measurement.id %>
+<%= hidden_field_tag 'user_bra[catalog_bra_id]', bra_measurement_user['id'] %>
+<%= hidden_field_tag 'product_buy_url', bra_measurement_user.product_buy_url %>
+<%= f.submit "Voir le produit", class:"btn btn-primary btn-sm add-to-cart", style:"background-color:pink; margin-bottom:6px", formtarget:"_blank" %>
+<% end %>
 
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
