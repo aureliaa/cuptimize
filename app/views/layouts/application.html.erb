@@ -11,6 +11,7 @@
       Title
     =========================== -->
     <title>Cuptimize - la lingerie à votre taille</title>
+    <%= csrf_meta_tags %>
 
     <!-- ==========================
       Fonts
@@ -45,7 +46,10 @@
 
 </head>
 <body>
+<!--        <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p> -->
     <div id="page-wrapper"> <!-- PAGE - START -->
+    <%= render 'shared/flashes' %>
       <%= render 'shared/navbar' %>
 
     <%= yield %>
