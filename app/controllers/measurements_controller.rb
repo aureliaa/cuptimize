@@ -1,5 +1,5 @@
 class MeasurementsController < ApplicationController
-
+  skip_before_action :authenticate_user!, :only => :new
   def index         # GET /restaurants
     @measurements = Measurement.all
   end

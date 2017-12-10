@@ -17,6 +17,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker', '~> 3.0'
 gem 'jquery-turbolinks'
+gem 'devise'
 
 group :development, :test do
   gem 'pry-byebug'
