@@ -2,7 +2,7 @@ class CatalogBrasController < ApplicationController
 
   def index         # GET /restaurants
     @catalogbras = CatalogBra.all
-    @measurement = Measurement.new(measurement_params)
+    @measurement = current_user.measurements.new(measurement_params)
     @measurement.save
     @rib_cage_parameter = params['measurement']['rib_cage_parameter'].to_i.ceil
     @breast_cage_rest_perimeter = params['measurement']['breast_cage_rest_perimeter'].to_i.ceil

@@ -1,7 +1,7 @@
 class MeasurementsController < ApplicationController
   skip_before_action :authenticate_user!, :only => :new
   def index         # GET /restaurants
-    @measurements = Measurement.all
+    @measurements = current_user.measurements.all
   end
 
   def show          # GET /restaurants/:id
@@ -13,7 +13,7 @@ class MeasurementsController < ApplicationController
   end
 
   def create
-    @measurement = Measurement.new(measurement_params)
+    @measurement = current_user.measurements.new(measurement_params)
     @measurement.save
     redirect_to measurements_path(@measurement)
   end
