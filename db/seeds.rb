@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'csv'
-
-csv_text = File.read('stock_export_full_for_aureliaa.csv')
+csv_texts = [File.read('stock_export_full_for_aureliaa.csv'), File.read('kinga_mycsvfile.csv')]
+csv_texts.each do |csv_text|
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 csv.each do |row|
   t = CatalogBra.new
@@ -53,4 +53,4 @@ csv.each do |row|
   t.save
   puts "#{t.description_name_eng} #{t.code_on_card}, #{t.product_size} saved"
 end
-
+end

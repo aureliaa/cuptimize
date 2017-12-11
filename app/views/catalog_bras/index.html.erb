@@ -1,28 +1,28 @@
  <section class="content jumbotron jumbotron-full-height">
-        <div id="homepage-2-carousel" class="nav-inside">
+  <div id="homepage-2-carousel" class="nav-inside">
 
-            <div class="item slide-1" style="background-image:url(http://res.cloudinary.com/dl3nkexul/image/upload/v1512510637/StockSnap_OB8I3EWMW7_rpgaxc.jpg); background-position:center">
-                <div class="slide-mask"></div>
-                <div class="slide-body">
-                    <div class="container">
-                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                        <h2>Votre sélection</h2>
-                    </div>
-                     <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                </div>
-            </div>
+    <div class="item slide-1" style="background-image:url(http://res.cloudinary.com/dl3nkexul/image/upload/v1512510637/StockSnap_OB8I3EWMW7_rpgaxc.jpg); background-position:center">
+      <div class="slide-mask"></div>
+      <div class="slide-body">
+        <div class="container">
+          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+          <h2>Votre sélection</h2>
         </div>
-    </section>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="content products">
 
-        <div class="container">
-            <h2 class="hidden">Products</h2>
-            <div class="row">
-                <div class="col-sm-3">
-                  <aside class="sidebar">
+  <div class="container">
+    <h2 class="hidden">Products</h2>
+    <div class="row">
+      <div class="col-sm-3">
+        <aside class="sidebar">
 
-                        <!-- WIDGET:CATEGORIES - START -->
-                        <div class="widget widget-categories">
+          <!-- WIDGET:CATEGORIES - START -->
+<!--                         <div class="widget widget-categories">
                             <div class="collapse in" id="widget-categories-collapse" aria-expanded="true" role="tabpanel">
                               <div class="widget-body">
                                     <ul class="list-unstyled" id="categories" role="tablist" aria-multiselectable="true">
@@ -43,52 +43,52 @@
                                     </ul>
                                 </div>
                           </div>
-                        </div>
+                        </div> -->
                         <!-- WIDGET:CATEGORIES - END -->
 
 
-                  </aside>
-                </div>
-                <div class="col-sm-9">
+                      </aside>
+                    </div>
+                    <div class="col-sm-9">
 
                     <div class="row grid" id="products">
 
                         <!-- PRODUCT - START -->
-                      <% @bras_measurement_user.each do |bra_measurement_user| %>
-                      <div class="col-sm-4 col-xs-6">
-                            <article class="product-item">
-                              <div class="row">
-                                  <div class="col-sm-3">
-                                      <div class="product-overlay">
-                                            <div class="product-mask"></div>
-                                          <img src="<%= bra_measurement_user.images_large_image_1%>" class="img-responsive" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-9">
-                                      <div class="product-body">
-                                            <h3><%= bra_measurement_user.description_name_eng %></h3>
-                                            <h4><%= bra_measurement_user.producer_name %></h4>
-
-                                            <span class="price">
-                                                <ins><span class="amount"><%= bra_measurement_user.product_size %></span></ins>
-                                            </span>
-<%= simple_form_for @measurement, url: user_bras_path, method: :get do |f| %>
-<%= hidden_field_tag 'user_bra[measurement_id]', @measurement.id %>
-<%= hidden_field_tag 'user_bra[catalog_bra_id]', bra_measurement_user['id'] %>
-<%= hidden_field_tag 'product_buy_url', bra_measurement_user.product_buy_url %>
-<%= f.submit "Voir le produit", class:"btn btn-primary btn-sm add-to-cart", style:"background-color:pink; margin-bottom:6px", formtarget:"_blank" %>
-<% end %>
-
-                                        </div>
-                                    </div>
+                        <% @bras_measurement_user.each do |bra_measurement_user| %>
+                        <div class="col-sm-4 col-xs-6">
+                          <article class="product-item">
+                            <div class="row">
+                              <div class="col-sm-3">
+                                <div class="product-overlay">
+                                  <div class="product-mask"></div>
+                                  <img src="<%= bra_measurement_user.images_large_image_1%>" class="img-responsive" alt="" style=>
                                 </div>
-                            </article>
+                              </div>
+                              <div class="col-sm-9">
+                                <div class="product-body">
+                                  <h3><%= bra_measurement_user.description_name_eng %></h3>
+                                  <h4><%= bra_measurement_user.producer_name %></h4>
+
+                                  <span class="price">
+                                    <ins><span class="amount"><%= bra_measurement_user.product_size %></span></ins>
+                                  </span>
+                                  <%= simple_form_for @measurement, url: user_bras_path, method: :get do |f| %>
+                                  <%= hidden_field_tag 'user_bra[measurement_id]', @measurement.id %>
+                                  <%= hidden_field_tag 'user_bra[catalog_bra_id]', bra_measurement_user['id'] %>
+                                  <%= hidden_field_tag 'product_buy_url', bra_measurement_user.product_buy_url %>
+                                  <%= f.submit "Voir le produit", class:"btn btn-primary btn-sm add-to-cart", style:"background-color:pink; margin-bottom:6px", formtarget:"_blank" %>
+                                  <% end %>
+
+                                </div>
+                              </div>
+                            </div>
+                          </article>
                         </div>
-<% end %>
+                        <% end %>
                         <!-- PRODUCT - END -->
-</div>
-</div>
-</div>
-</div>
-</section>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
 

@@ -2251,6 +2251,7 @@ article.product-item  {
 article.product-item .product-overlay {
   position:relative;
   display:block;
+
 }
 
 article.product-item .product-overlay .product-mask {
@@ -2271,7 +2272,7 @@ article.product-item:hover .product-overlay .product-mask {
   filter:alpha(opacity=30);
 }
 
-article.product-item .product-image-2 {
+article.product-item .product-image {
   position:absolute;
   top:0;
   opacity:0;
@@ -2279,7 +2280,7 @@ article.product-item .product-image-2 {
   z-index:100;
 }
 
-article.product-item:hover .product-image-2 {
+article.product-item:hover .product-image {
   opacity:1;
 }
 
