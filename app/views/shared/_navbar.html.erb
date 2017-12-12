@@ -26,7 +26,9 @@
             <ul class="nav navbar-nav navbar-right">
               <li class="dropdown">
                 <% if user_signed_in? %>
-                  <li> <%= link_to "Mes mensurations", "/measurements", class: "navbarmytrips" %> </li>
+<!--                   <li>
+                  <%= link_to "Mes mensurations", "/measurements", class: "navbarmytrips" %>
+                  </li> -->
                   <li><%= link_to "Se déconnecter", destroy_user_session_path, :method => :delete %></li>
                   <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true">Blog</a>
                     <ul class="dropdown-menu">
