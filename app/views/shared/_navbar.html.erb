@@ -18,24 +18,24 @@
       <header class="navbar navbar-transparent navbar-fixed-top">
         <div class="container">
           <div class="navbar-header">
-            <a href="/" class="navbar-brand" style="color:pink"><span>C</span>uptimize</a>
+            <a href="/" class="navbar-brand" style="color:pink"><span>C</span>uptomize</a>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><i class="fa fa-bars"></i></button>
           </div>
           <div class="navbar-collapse collapse">
-            <p class="navbar-text hidden-xs hidden-sm">Trouvez le soutien-gorge qui vous va</p>
+            <p class="navbar-text hidden-xs hidden-sm">Plus de confort pour votre intimité</p>
             <ul class="nav navbar-nav navbar-right">
               <li class="dropdown">
                 <% if user_signed_in? %>
                   <li> <%= link_to "Mes mensurations", "/measurements", class: "navbarmytrips" %> </li>
-                  <li><%= link_to "Log out", destroy_user_session_path, :method => :delete %></li>
+                  <li><%= link_to "Se déconnecter", destroy_user_session_path, :method => :delete %></li>
                   <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true">Blog</a>
                     <ul class="dropdown-menu">
                       <li><a href="index.html">Article 1</a></li>
                     </ul></li>
                   </li>
                 <% else %>
-                  <li><%= link_to "Log in", "/users/sign_in", class: "navbar-log_in navbar-wagon-link" %></li>
-                  <li><%= link_to "Sign up", "/users/sign_up", class: "navbar-log_in navbar-wagon-link" %></li>
+                  <li><%= link_to "Se connecter", "/users/sign_in", class: "navbar-log_in navbar-wagon-link" %></li>
+                  <li><%= link_to "S'inscrire", "/users/sign_up", class: "navbar-log_in navbar-wagon-link" %></li>
                   <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true">Blog</a>
                   <ul class="dropdown-menu">
                     <li><a href="index.html">Article 1</a></li>
