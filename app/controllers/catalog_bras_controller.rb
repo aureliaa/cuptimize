@@ -14,6 +14,7 @@ class CatalogBrasController < ApplicationController
     @breast_roots = params['measurement']['breast_roots'].to_i
     @bras_measurement_user = []
       @catalogbras.shuffle.each do |catalogbra|
+      if catalogbra.stock > 0
         if @rib_cage_parameter >= catalogbra.min_band_size && @rib_cage_parameter <= catalogbra.max_band_size
           if @breast_cage_bend_perimeter == catalogbra.max_cup_size
              @breast_cage_bend_perimeter = @breast_cage_bend_perimeter + 1
@@ -23,6 +24,7 @@ class CatalogBrasController < ApplicationController
             @bras_measurement_user << catalogbra
           end
         end
+      end
       end
 
   end
