@@ -3394,7 +3394,14 @@ footer.navbar a:hover {
 }
 
 .jumbotron-full-height {
-  height:100%;
+  height:75%;
+  background-image:url(http://res.cloudinary.com/dl3nkexul/image/upload/v1515963093/test3_dprzyx.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  text-align:left;
+  background-position: 40% 40%;
+  background-size:cover;
 }
 
 .container .jumbotron-small {
@@ -3456,6 +3463,10 @@ footer.navbar a:hover {
   font-family:Raleway, sans-serif;
   font-weight:200;
   margin:0 0 20px;
+}
+
+.jumbotron h2 span{
+  background-color: white;
 }
 
 .jumbotron ul li {
@@ -3534,7 +3545,7 @@ footer.navbar a:hover {
 
 #homepage-1-carousel .slide-1 {
   text-align:center;
-  background-image:url(http://res.cloudinary.com/dl3nkexul/image/upload/v1512054527/bra-1659570_1920_fiokgj.jpg);
+  background-image:url(http://res.cloudinary.com/dl3nkexul/image/upload/v1515958400/test6_a8et6q.jpg);
   background-position-y:-230px;
 }
 
@@ -3584,11 +3595,11 @@ footer.navbar a:hover {
 /* HOME2 - SLIDE 1 */
 
 #homepage-2-carousel .slide-1 {
-  background-image:url(http://res.cloudinary.com/dl3nkexul/image/upload/v1512054527/bra-1659570_1920_fiokgj.jpg);
+  background-image:url(http://res.cloudinary.com/dl3nkexul/image/upload/v1515958400/test6_a8et6q.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  text-align:center;
+  text-align:left;
   background-size:center;
 }
 
