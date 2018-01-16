@@ -222,14 +222,38 @@ h6 {
 }
 
 .btn-inverse {
-  background-color:#666666;
-  border:2px solid #555555;
-  color:#FFFFFF;
+  font-size: 18px;
+  padding: 12px 20px;
+  font-weight:500;
+  border-color:white;
+  background-color:rgb(181,203,230);
+  $color: rgba(255,0,204,0.8);
+  color: $color;
+  &:hover {
+    animation: halftone 1s forwards;
+    background: radial-gradient(circle, $color 0.2em, transparent 0.25em) 0 0 / 1.25em 1.25em
+              , radial-gradient(circle, $color 0.2em, transparent 0.25em) 6.25em 6.25em / 1.25em 1.25em;
+    color: rgb(181,203,230);
+  }
+}
+
+.jumbotron a.btn-inverse:hover {
+  background-color:rgba(255,255,255,0.8);
+}
+
+@keyframes halftone {
+  100% {
+    background-size: 2.375em 2.375em, 0.1em 0.1em;
+  }
 }
 
 .btn-inverse:hover,
 .btn-inverse:focus {
-  color:#DDDDDD;
+  $color: rgba(255,0,204,0.8);
+  animation: halftone 1s forwards;
+    background: radial-gradient(circle, $color 0.2em, transparent 0.25em) 0 0 / 1.25em 1.25em
+              , radial-gradient(circle, $color 0.2em, transparent 0.25em) 6.25em 6.25em / 1.25em 1.25em;
+    color: rgb(181,203,230);
 }
 
 .btn.active,
@@ -3399,8 +3423,8 @@ footer.navbar a:hover {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  text-align:left;
-  background-position: 40% 40%;
+  text-align:center;
+  background-position: 50% 50%;
   background-size:cover;
 }
 
@@ -3459,14 +3483,16 @@ footer.navbar a:hover {
 
 .jumbotron h2 {
   color:#FFFFFF;
-  font-size:40px;
+  font-size:50px;
   font-family:Raleway, sans-serif;
   font-weight:200;
   margin:0 0 20px;
+  line-height: 120%;
 }
 
 .jumbotron h2 span{
-  background-color: white;
+  background-color: rgba(181,203,230,0.8);
+  text-align:left;
 }
 
 .jumbotron ul li {
@@ -3499,6 +3525,7 @@ footer.navbar a:hover {
 .jumbotron a.btn-lg {
   font-size:18px;
   padding:12px 20px;
+  font-weight: 500;
 }
 
 .jumbotron a.btn-default {
@@ -3506,12 +3533,25 @@ footer.navbar a:hover {
 }
 
 .jumbotron a.btn-inverse {
-  color:#666666;
-  background-color:#FFFFFF;
+  background-color:rgb(181,203,230);
+  $color: rgba(255,0,204,0.8);
+  color: $color;
+  &:hover {
+    animation: halftone 1s forwards;
+    background: radial-gradient(circle, $color 0.2em, transparent 0.25em) 0 0 / 1.25em 1.25em
+              , radial-gradient(circle, $color 0.2em, transparent 0.25em) 6.25em 6.25em / 1.25em 1.25em;
+    color: rgb(181,203,230);
+  }
 }
 
 .jumbotron a.btn-inverse:hover {
   background-color:rgba(255,255,255,0.8);
+}
+
+@keyframes halftone {
+  100% {
+    background-size: 2.375em 2.375em, 0.1em 0.1em;
+  }
 }
 
 .jumbotron .border {
@@ -3810,10 +3850,29 @@ footer.navbar a:hover {
 
 /* SECTION - NOTIFICATION */
 
-.notification {
-    padding:40px 0 50px;
-  text-align:center;
+
+.notification .number {
+  background-color: #FF00CC;
+  color: #B3CAE5;
+  border: 4px solid #B3CAE5;
+  width: 50px;
+  height:50px;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 40px;
+  margin-bottom: 10px;
+  font-family: "Source Sans Pro", Verdana, Geneva, sans-serif;
+  font-weight: bold;
+  font-size: 40px;
 }
+
+
+.notification {
+  padding:40px 0 50px;
+  text-align:center;
+  background-color: white;
+}
+
 
 .notification span {
   font-size:36px;
@@ -3824,13 +3883,6 @@ footer.navbar a:hover {
   margin-bottom:20px;
 }
 
-.notification a {
-  color:#888888;
-  border-color:#999999;
-  font-size:22px;
-  padding:12px 60px;
-}
-
 .notification h3 {
     font-size: 34px;
     font-family: Raleway, sans-serif;
@@ -3838,6 +3890,19 @@ footer.navbar a:hover {
     letter-spacing: 2px;
   color:#888888;
   margin:10px 0 20px;
+}
+
+.notification h2 {
+  font-family: Raleway, sans-serif;
+  font-weight: 80;
+  color: #B3CAE5;
+  padding: 10px;
+}
+
+.notification .explication p {
+  margin-right:20px;
+  margin-left:20px;
+  color: #B3CAE5;
 }
 
 .notification p {
@@ -4015,8 +4080,8 @@ footer.navbar a:hover {
 /* SECTION - SERVICES */
 
 .services {
-  background-color:#FFFFFF;
-  padding:60px 0 0;
+  // background-color:#FFFFFF;
+  padding:10px 0 0;
 }
 
 .services .service {
@@ -4048,7 +4113,7 @@ footer.navbar a:hover {
 }
 
 .services .service p {
-  color:#999999;
+  color:#B3CAE5;
     font-size:14px;
   line-height:24px;
     font-family:Raleway, sans-serif;
@@ -4894,6 +4959,28 @@ footer.navbar a:hover {
     line-height:36px;
     margin-bottom:10px;
   }
+
+  .notification a.btn-inverse {
+     background-color:rgb(181,203,230);
+  $color: rgba(255,0,204,0.8);
+  color: $color;
+  &:hover {
+    animation: halftone 1s forwards;
+    background: radial-gradient(circle, $color 0.2em, transparent 0.25em) 0 0 / 1.25em 1.25em
+              , radial-gradient(circle, $color 0.2em, transparent 0.25em) 6.25em 6.25em / 1.25em 1.25em;
+    color: rgb(181,203,230);
+  }
+}
+
+.notification a.btn-inverse:hover {
+  background-color:rgba(255,255,255,0.8);
+}
+
+@keyframes halftone {
+  100% {
+    background-size: 2.375em 2.375em, 0.1em 0.1em;
+  }
+}
 
   .grid-products .small-product li img {
     display:none;
