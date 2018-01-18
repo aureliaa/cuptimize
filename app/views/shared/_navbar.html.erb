@@ -9,7 +9,7 @@
             </div>
             <div class="col-sm-7 text-right">
               <ul class="list-inline links">
-                <li><a href="my-account.html">Blog</a></li>
+                <li><a href="/blog">Blog</a></li>
               </ul>
             </div>
           </div>
@@ -24,33 +24,11 @@
           <div class="navbar-collapse collapse">
             <p class="navbar-text hidden-xs hidden-sm">Plus de confort pour votre intimité</p>
             <ul class="nav navbar-nav navbar-right">
+              <!-- <li class="dropdown"> -->
+
               <li class="dropdown">
-                <% if user_signed_in? %>
-<!--                   <li>
-                  <%= link_to "Mes mensurations", "/measurements", class: "navbarmytrips" %>
-                </li> -->
-                <li><%= link_to "Se déconnecter", destroy_user_session_path, :method => :delete %></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true">Blog</a>
-                  <ul class="dropdown-menu">
-                  <li><a href="/article_1">Article 1</a></li>
-                    <li><a href="/article_2">Article 2</a></li>
-                    <li><a href="/article_3">Article 3</a></li>
-                  </ul>
-                </li>
+                <a href="/blog" data-delay="300" data-close-others="true">Blog</a>
               </li>
-              <% else %>
-              <li><%= link_to "Se connecter", "/users/sign_in", class: "navbar-log_in navbar-wagon-link" %></li>
-              <li><%= link_to "S'inscrire", "/users/sign_up", class: "navbar-log_in navbar-wagon-link" %></li>
-                               <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true">Blog</a>
-                        <ul class="dropdown-menu">
-                          <li><a href="/article_1">Article 1</a></li>
-                            <li><a href="/article_2">Article 2</a></li>
-                            <li><a href="/article_3">Article 3</a></li>
-                        </ul>
-                    </li>
-              <% end %>
             </li>
           </ul>
         </div>
