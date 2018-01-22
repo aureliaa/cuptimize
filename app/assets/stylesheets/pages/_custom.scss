@@ -227,7 +227,7 @@ h6 {
   font-weight:500;
   border-color:white;
   background-color:rgb(181,203,230);
-  $color: rgba(255,0,204,0.8);
+  $color: rgb(255, 77, 210);
   color: $color;
   &:hover {
     animation: halftone 1s forwards;
@@ -249,7 +249,7 @@ h6 {
 
 .btn-inverse:hover,
 .btn-inverse:focus {
-  $color: rgba(255,0,204,0.8);
+  $color: rgb(255, 77, 210);
   animation: halftone 1s forwards;
     background: radial-gradient(circle, $color 0.2em, transparent 0.25em) 0 0 / 1.25em 1.25em
               , radial-gradient(circle, $color 0.2em, transparent 0.25em) 6.25em 6.25em / 1.25em 1.25em;
@@ -3534,7 +3534,7 @@ footer.navbar a:hover {
 
 .jumbotron a.btn-inverse {
   background-color:rgb(181,203,230);
-  $color: rgba(255,0,204,0.8);
+  $color: #366099;
   color: $color;
   &:hover {
     animation: halftone 1s forwards;
@@ -4963,7 +4963,7 @@ footer.navbar a:hover {
 
   .notification a.btn-inverse {
      background-color:rgb(181,203,230);
-  $color: rgba(255,0,204,0.8);
+  $color: #366099;
   color: $color;
   &:hover {
     animation: halftone 1s forwards;
