@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   get '/article_1', to: 'pages#article_1'
   get '/article_2', to: 'pages#article_2'
   get '/article_3', to: 'pages#article_2'
+  get '/blog', to: 'pages#blog'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

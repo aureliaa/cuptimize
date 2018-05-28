@@ -222,14 +222,38 @@ h6 {
 }
 
 .btn-inverse {
-  background-color:#666666;
-  border:2px solid #555555;
-  color:#FFFFFF;
+  font-size: 18px;
+  padding: 12px 20px;
+  font-weight:500;
+  border-color:white;
+  background-color:rgb(181,203,230);
+  $color: rgb(255, 77, 210);
+  color: $color;
+  &:hover {
+    animation: halftone 1s forwards;
+    background: radial-gradient(circle, $color 0.2em, transparent 0.25em) 0 0 / 1.25em 1.25em
+              , radial-gradient(circle, $color 0.2em, transparent 0.25em) 6.25em 6.25em / 1.25em 1.25em;
+    color: rgb(181,203,230);
+  }
+}
+
+.jumbotron a.btn-inverse:hover {
+  background-color:rgba(255,255,255,0.8);
+}
+
+@keyframes halftone {
+  100% {
+    background-size: 2.375em 2.375em, 0.1em 0.1em;
+  }
 }
 
 .btn-inverse:hover,
 .btn-inverse:focus {
-  color:#DDDDDD;
+  $color: rgb(255, 77, 210);
+  animation: halftone 1s forwards;
+    background: radial-gradient(circle, $color 0.2em, transparent 0.25em) 0 0 / 1.25em 1.25em
+              , radial-gradient(circle, $color 0.2em, transparent 0.25em) 6.25em 6.25em / 1.25em 1.25em;
+    color: rgb(181,203,230);
 }
 
 .btn.active,
@@ -3394,7 +3418,14 @@ footer.navbar a:hover {
 }
 
 .jumbotron-full-height {
-  height:100%;
+  height:75%;
+  background-image:url(http://res.cloudinary.com/dl3nkexul/image/upload/v1515963093/test3_dprzyx.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  text-align:center;
+  background-position: 50% 50%;
+  background-size:cover;
 }
 
 .container .jumbotron-small {
@@ -3452,10 +3483,16 @@ footer.navbar a:hover {
 
 .jumbotron h2 {
   color:#FFFFFF;
-  font-size:40px;
+  font-size:50px;
   font-family:Raleway, sans-serif;
   font-weight:200;
   margin:0 0 20px;
+  line-height: 120%;
+}
+
+.jumbotron h2 span{
+  background-color: rgba(181,203,230,0.8);
+  text-align:left;
 }
 
 .jumbotron ul li {
@@ -3488,6 +3525,7 @@ footer.navbar a:hover {
 .jumbotron a.btn-lg {
   font-size:18px;
   padding:12px 20px;
+  font-weight: 500;
 }
 
 .jumbotron a.btn-default {
@@ -3495,12 +3533,25 @@ footer.navbar a:hover {
 }
 
 .jumbotron a.btn-inverse {
-  color:#666666;
-  background-color:#FFFFFF;
+  background-color:rgb(181,203,230);
+  $color: #366099;
+  color: $color;
+  &:hover {
+    animation: halftone 1s forwards;
+    background: radial-gradient(circle, $color 0.2em, transparent 0.25em) 0 0 / 1.25em 1.25em
+              , radial-gradient(circle, $color 0.2em, transparent 0.25em) 6.25em 6.25em / 1.25em 1.25em;
+    color: rgb(181,203,230);
+  }
 }
 
 .jumbotron a.btn-inverse:hover {
   background-color:rgba(255,255,255,0.8);
+}
+
+@keyframes halftone {
+  100% {
+    background-size: 2.375em 2.375em, 0.1em 0.1em;
+  }
 }
 
 .jumbotron .border {
@@ -3534,7 +3585,7 @@ footer.navbar a:hover {
 
 #homepage-1-carousel .slide-1 {
   text-align:center;
-  background-image:url(http://res.cloudinary.com/dl3nkexul/image/upload/v1512054527/bra-1659570_1920_fiokgj.jpg);
+  background-image:url(http://res.cloudinary.com/dl3nkexul/image/upload/v1515958400/test6_a8et6q.jpg);
   background-position-y:-230px;
 }
 
@@ -3584,11 +3635,11 @@ footer.navbar a:hover {
 /* HOME2 - SLIDE 1 */
 
 #homepage-2-carousel .slide-1 {
-  background-image:url(http://res.cloudinary.com/dl3nkexul/image/upload/v1512054527/bra-1659570_1920_fiokgj.jpg);
+  background-image:url(http://res.cloudinary.com/dl3nkexul/image/upload/v1515958400/test6_a8et6q.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  text-align:center;
+  text-align:left;
   background-size:center;
 }
 
@@ -3799,10 +3850,29 @@ footer.navbar a:hover {
 
 /* SECTION - NOTIFICATION */
 
-.notification {
-    padding:40px 0 50px;
-  text-align:center;
+
+.notification .number {
+  background-color: #FF00CC;
+  color: #B3CAE5;
+  border: 4px solid #B3CAE5;
+  width: 50px;
+  height:50px;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 40px;
+  margin-bottom: 10px;
+  font-family: "Source Sans Pro", Verdana, Geneva, sans-serif;
+  font-weight: bold;
+  font-size: 40px;
 }
+
+
+.notification {
+  padding:40px 0 50px;
+  text-align:center;
+  background-color: white;
+}
+
 
 .notification span {
   font-size:36px;
@@ -3813,13 +3883,6 @@ footer.navbar a:hover {
   margin-bottom:20px;
 }
 
-.notification a {
-  color:#888888;
-  border-color:#999999;
-  font-size:22px;
-  padding:12px 60px;
-}
-
 .notification h3 {
     font-size: 34px;
     font-family: Raleway, sans-serif;
@@ -3827,6 +3890,20 @@ footer.navbar a:hover {
     letter-spacing: 2px;
   color:#888888;
   margin:10px 0 20px;
+}
+
+.notification h2 {
+  font-family: Raleway, sans-serif;
+  font-weight: 80;
+  color: #B3CAE5;
+  padding: 10px;
+  padding-top: 60px;
+}
+
+.notification .explication p {
+  margin-right:20px;
+  margin-left:20px;
+  color: #B3CAE5;
 }
 
 .notification p {
@@ -4004,14 +4081,14 @@ footer.navbar a:hover {
 /* SECTION - SERVICES */
 
 .services {
-  background-color:#FFFFFF;
-  padding:60px 0 0;
+  // background-color:#FFFFFF;
+  padding:10px 0 0;
 }
 
 .services .service {
   text-align:center;
   padding:15px;
-  border-right:1px solid #F0F0F0;
+  // border-right:1px solid #F0F0F0;
   margin-bottom:60px;
 }
 
@@ -4037,8 +4114,8 @@ footer.navbar a:hover {
 }
 
 .services .service p {
-  color:#999999;
-    font-size:14px;
+  color:#B3CAE5;
+    font-size:18px;
   line-height:24px;
     font-family:Raleway, sans-serif;
     font-weight:500;
@@ -4185,7 +4262,7 @@ footer.navbar a:hover {
 ------------------------------*/
 
 .blog {
-  background-color:#FFFFFF;
+  background-color:#B3CAE5;
   border-top:1px solid #F0F0F0;
 }
 
@@ -4234,7 +4311,7 @@ footer.navbar a:hover {
 .blog article.post .meta .category {
   display:inline-block;
   font-weight:600;
-  border:2px solid #E87169;
+  border:2px solid #FF00CC;
   padding:0 5px;
   margin-bottom:10px;
 }
@@ -4883,6 +4960,28 @@ footer.navbar a:hover {
     line-height:36px;
     margin-bottom:10px;
   }
+
+  .notification a.btn-inverse {
+     background-color:rgb(181,203,230);
+  $color: #366099;
+  color: $color;
+  &:hover {
+    animation: halftone 1s forwards;
+    background: radial-gradient(circle, $color 0.2em, transparent 0.25em) 0 0 / 1.25em 1.25em
+              , radial-gradient(circle, $color 0.2em, transparent 0.25em) 6.25em 6.25em / 1.25em 1.25em;
+    color: rgb(181,203,230);
+  }
+}
+
+.notification a.btn-inverse:hover {
+  background-color:rgba(255,255,255,0.8);
+}
+
+@keyframes halftone {
+  100% {
+    background-size: 2.375em 2.375em, 0.1em 0.1em;
+  }
+}
 
   .grid-products .small-product li img {
     display:none;
