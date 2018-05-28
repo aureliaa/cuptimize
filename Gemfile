@@ -18,6 +18,7 @@ gem 'uglifier'
 gem 'webpacker', '~> 3.0'
 gem 'jquery-turbolinks'
 gem 'devise'
+gem 'materialize-sass'
 
 group :development, :test do
   gem 'pry-byebug'
